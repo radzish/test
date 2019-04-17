@@ -32,4 +32,4 @@ function test() {
     });
 }
 
-setTimeout(test, 3600*1000);
+setTimeout(test, 1000);
