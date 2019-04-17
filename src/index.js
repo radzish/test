@@ -8,6 +8,8 @@ const connectionString = {
     port: 5432,
 };
 
+console.log(`connecting to DB: ${process.env.DATABASE_USER};${process.env.DATABASE_PASSWORD};${process.env.DATABASE_NAME}`);
+
 const pool = new pg.Pool(connectionString);
 
 pool.connect(function(err, client, done) {
