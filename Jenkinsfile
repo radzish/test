@@ -15,7 +15,8 @@ pipeline {
     stage('Run Node Script') {
       steps {
         container('node') {
-          sh 'nodejs test.js'
+          sh 'npm install'
+          sh 'node src/index.js'
         }
       }
     }

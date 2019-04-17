@@ -5,6 +5,22 @@ spec:
     - name: node
       image: node:6
       tty: true
+      env:
+        - name: DATABASE_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: db_user
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: db_password
+        - name: DATABASE_NAME
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: db_name
     - name: cloudsql-proxy
       env:
         - name: DB_CONNECTION_NAME
