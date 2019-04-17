@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 const connectionString = {
-    host: '127.0.0.1',
+    host: 'localhost',
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
@@ -32,4 +32,4 @@ function test() {
     });
 }
 
-setTimeout(test, 10000);
+setTimeout(test, 3600*1000);
