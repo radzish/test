@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 const connectionString = {
-    host: 'localhost',
+    host: '127.0.0.1',
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
