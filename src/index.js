@@ -14,6 +14,8 @@ const pool = new pg.Pool(connectionString);
 
 pool.connect(function(err, client, done) {
 
+    console.log(`ERROR: ${err}`);
+
     const query = client.query(new pg.Query("select * from t_test"))
     query.on('row', (row) => {
         console.log(row);
